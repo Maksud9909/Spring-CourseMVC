@@ -20,9 +20,9 @@ public class Employee {
     private Map<String,String> carBrands;
     private String languages;
     private Map<String,String> languagesList;
-    @Pattern(regexp = "\\d{2}\\d{3}\\d{2}\\d{2}", message = "please use pattern XX-XXX-XX-XX") // 998525858
+    @Pattern(regexp = "\\d{2}\\d{3}\\d{2}\\d{2}", message = "please use pattern XX-XXX-XX-XX,without '-'") // 998525858
     private String phoneNumber;
-    @CheckEmail (value = "abc.com",message = "email must ends with abc.com")
+    @CheckEmail (value = "gmail.com",message = "email must ends with abc.com")
     private String email;
 
     public Employee() {
@@ -35,6 +35,7 @@ public class Employee {
         carBrands.put("BMW","BMW");
         carBrands.put("Mersedez-benz","MB");
         carBrands.put("Audi","Audi");
+        carBrands.put("Chevrolet","Malibu");
 
         languagesList = new HashMap<>();
         languagesList.put("English","EN");
